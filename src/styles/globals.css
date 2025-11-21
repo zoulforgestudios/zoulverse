@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-void-black: #0E1120;
+    --color-cosmic-navy: #0B0F29;
+    --color-nebula-blue: #141A40;
+    --color-cyan-glow: #24C3FF;
+    --color-mystic-purple: #8A5DFF;
+    --color-celestial-gold: #FFD46A;
+    --color-dusk-blue: #3F517E;
+    --color-slate-shadow: #1E293B;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Cinzel';
+    src: local('Cinzel');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    src: local('Cinzel Decorative');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Lora';
+    src: local('Lora');
+    font-display: swap;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#0E1120] text-slate-100;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.02em;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0F29;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #8A5DFF, #24C3FF);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #a78bfa, #60a5fa);
+  }
+}
+
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(138, 93, 255, 0.5), 0 0 40px rgba(138, 93, 255, 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(36, 195, 255, 0.5), 0 0 40px rgba(36, 195, 255, 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 212, 106, 0.5), 0 0 40px rgba(255, 212, 106, 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px currentColor;
+  }
+
+  .cosmic-gradient {
+    background: linear-gradient(135deg, #0B0F29 0%, #141A40 25%, #1E293B 50%, #3F517E 75%, #0E1120 100%);
+  }
+
+  .cosmic-gradient-text {
+    background: linear-gradient(135deg, #8A5DFF, #24C3FF, #FFD46A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cosmic-border {
+    border: 1px solid;
+    border-image: linear-gradient(135deg, #8A5DFF, #24C3FF, #FFD46A) 1;
+  }
+
+  .logo-font {
+    font-family: 'Cinzel Decorative', serif;
+  }
+
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .story-text {
+    font-family: 'Lora', 'Inter', serif;
+    line-height: 1.8;
+  }
+}
